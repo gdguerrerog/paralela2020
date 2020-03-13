@@ -1,0 +1,22 @@
+12/mar/2020
+
+Tipos de procesadores: 
+- complex instruccion set computer (CISC)
+- reduced instruction set computer (RISC)
+
+Hay 2 arquitecturas generales para un computador: Von Newmann y Harvard
+La aquiotectura Harvar se espcializo en desarrollar RISC.
+La RISC se caraceriaz por tener instrucciones con CPI constante (Cicles PEr instruction), por lo que es facil determinar el tiempo de ejecución de un programa
+
+3.249 ciclos por instruccion en promedio
+
+1/300000000 es el segundos por ciclo
+3.249/300000000 es el segundos por instrucción
+
+3000000000/3.249 es la cantidad de instrucciones por segundo
+3000/3.249 es la cantidad de millones de instrucciones por segundo
+
+923,361034164 millones de instrccuiones por segundo
+
+Usar PTread.create an PThread.join
+
