@@ -1,0 +1,69 @@
+17/mar/2020
+
+Los MFLOPS son Millions of Float Operations per Second (Cantidad de operaciones de punto flotante.
+
+Un programa tambien debe contemplar la cantidad de operaciones de
+lectura o escritura en la memoria.
+
+t(A) = (n_cicles(A) + n_mmcicles(A))*t_cicles
+n_mmcicles(A)= n_wcicles(A)+ n_rcicles(A)
+
+Benchmark: Programas que ayudan a evaluar el rendimiento de un procesador
+	- Synthetic Benchmark: Medir individualmente el tiempoque tarada una operacion especifica
+	- Kernel Benchmark:
+	- Real aplication benchmark: Probar el procesador corriendo programas  que requieran un alto poder coputacional (Juegos, programas de Adobe, etc)
+	
+	- spec.org página para ver benchmark
+
+Tiempo paralelo: Tiempo qe tarda en ejecutar un programa desde que inicia hasta que termina.
+
+Eficiencia: Numero que dice que tanto estoy gastando para ejecutar un programama:
+
+C_p(n) = P * T_p(n)
+
+C_p Costp. P = numero de procesadores. N = tamaño. T = tiempo paralelo
+
+Speedup o factor de aceleración
+
+S_p(n) = T*(n)/T_p(n)
+
+T* = tiempo del programa secuencial, T_p = tiempo paralelo.
+
+Se entiende que entre mas pocesadores ayor espeed up hasta ciertlo limite
+Para calcular e speedup se usa el mejor programa secuencial.
+
+
+Ley de Amdahl:
+	- No siempre el 100% del programa se puede paralelizar
+	- Dado f sea la parte secuencial de un programa entonces (1 - f) es la parte que se puede paralelizar
+	
+	--|--------------------------------------------|--> t
+	  t_0                                          t_1  
+	  |--------- f ------|-------- 1 - f ----------|
+	  
+	                     | ------ hilo 1 ----------|
+	                     | ------ hilo 2 ----------|
+	                     | ------ hilo 3 ----------|
+	                     | ------ hilo 4 ----------|
+
+	  |------- T*f-------|-------- T_p * (1 - f) ------------|
+	
+	- Entonces se puede calcular el SpeedUp
+		
+		|-----------------------------------------------|
+		|S_p(n) = T*(n)/(f*T*(n) + ((1 - f)/p) * T_p(n))|
+		|-----------------------------------------------|
+		
+		S_p = Speed up.
+		T*(n) = Tiempo secuencial
+		f = Procion secuencial del programa
+		p = numero de procesadores ( No numero de hilos)
+		T_p(n) = Tiempo paralelo
+
+	- Si la cantidad de procesadores tiende a infinito entonces el máximo speedUp posible es es 1/f
+
+Escalabilidad:
+	- Rendimiento de un programama paralelo es proporcional al número de procesadores. Es para saber si un sistema mejora si se le meten mas recursos
+	
+
+Para paralelo se puede uasr FORK
