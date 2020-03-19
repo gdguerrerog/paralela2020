@@ -1,0 +1,48 @@
+19-03-2020
+
+Taxonomia Flynn:
+SISD, SIMD, MISD, MIMD
+(Simple-Multiple Instuction, Simple-Multiple Data)
+
+
+Al dividir el problema por datos  e peude hacer de varias maneras
+
+	1)  Blockwise: Datos/hilos. Se separan los datos entre el numero de hilos y secomptan por aparte
+	2) Cyclic data: El hilo_i se encarga del dato d_j mod(n) + i donde d_j es el j-esimo datom n el numero de hilos e i el numero del hilo
+	3) Block cyclic data: Se elige un tamaño de bloque. El hilo_i se encarga de los datos de los bloques_j donde j c= i % n donde c= es congruente.   
+	
+	---------------------------
+	|B1|B2|B3|B4|B5|B6|...|B71|
+	---------------------------
+	|H0|H1|H2|H0|H1|H2|...|H1 |
+	----------------------------
+	Ejemplo con 3 hilos y 71 bloques.
+	
+Se recomienda el uso de Block cyclic data
+
+OpenMP
+	1) Simplificar aplicaciones multihilo
+	
+Ejemplo: 
+#include <stdio.h>
+#include "omp.h"
+void main()
+{
+	#pragma omp parallel // Inicio de region paralela
+	{
+		int ID = imp_get_thread_num();
+		printf("Hello(%d)",  ID);
+		printf(" Wolrd(%d")\n",  ID);
+	} // Fin de region paralela
+}
+	
+-----------------------------------
+|>htop para ver los hilos en linux|
+-----------------------------------
+
+Se puede utilizar 
+#pragma omp parallel num_threads(32)
+para definir el nuero de his¿los quese quieren ejecutar en esa region
+
+	
+	
