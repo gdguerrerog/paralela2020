@@ -47,4 +47,8 @@ para definir el nuero de his�los quese quieren ejecutar en esa region
 	
 otras funciones son 
 int omp_get_num_threads() // Obtener el total de hilos
-	
+int omp_get_max_threads() // Obtener el maximo de hilos del procesador
+
+Se puede usar sudo gcc -fopenmp -o calcPiOmp calcPiOmp.c; ./calcPiOmp 
+para compilar y ejecutar en el mismo comando
+

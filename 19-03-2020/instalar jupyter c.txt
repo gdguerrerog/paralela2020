@@ -1,0 +1,8 @@
+sudo apt install python3-pip
+python3 --version
+sudo apt install python-pip
+pip install jupyterlab
+pip install jupyter-c-kernel
+sudo apt  install jupyter-core
+sudo install_c_kernel (?)
+jupyter notebook
