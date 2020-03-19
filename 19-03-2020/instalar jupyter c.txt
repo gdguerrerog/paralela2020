@@ -6,3 +6,8 @@ pip install jupyter-c-kernel
 sudo apt  install jupyter-core
 sudo install_c_kernel (?)
 jupyter notebook
+
+PARA VER OS HILOS DEL PROCESADOR INSTALAR HTOP:
+sudo apt  install htop
+Y USAR
+htop
