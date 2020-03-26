@@ -1,15 +1,17 @@
+//%cflags:-fopenmp -lm -D_DEFAULT_SOURCE
+//gcc pi_omp.c -o pi_omp -fopenmp
 #include <stdio.h>
 #include "omp.h"
 #include <sys/time.h>
 
-#define iterations 1e09
+const int  iterations=1e09;
 #define THREADS 4
 #define intentos 10 
 
 int main(){
     struct timeval start, stop, diff;
     gettimeofday(&start, NULL);
-
+    
     double pi = 0; int i;
     #pragma omp parallel num_threads(THREADS)// Inicio de region paralela
     {
@@ -29,8 +31,6 @@ int main(){
 
     timersub(&stop, &start, &diff);
     printf("Time: %ld.%06ld\n", (long int) diff.tv_sec, (long int) diff.tv_usec);
-    printf("PI: %.15f. \n", final);
-
-    return 0;
+    printf("PI: %.15f. \n", -pi);
 
 }
