@@ -1,0 +1,55 @@
+26-03-2020
+
+Sincronizacion OMP:
+	- Condicion de carrera: Cuando un hilo sobre escribe lo que otro ha hecho por escribir en esa direccion de memoria despues
+	
+	- Con OMP para evitar que se pueda ejecutar una region de codgo especifica por mas de 1 hilo se usa #pragma omp critical
+	
+	- Anadir esas directivas danan el paralelismo. Tratar de minimizarla al maximo
+	
+Atomicidad:
+	- Un fragmento de codigo no se puede interrumpir
+	
+	- Para atomizar una funcion en OMP se usa #pragma omp atomic
+	
+Sincronizacion por barrera
+	- Sentencia usada para frenar la ejecucion de los hilos hasta cierto punto
+	
+	- En OMP se usa #pragma omp barrier
+	
+	- Hasta que todos los hilos no hallan ejecutado hasta barrier ninguno puede seguir. 
+	
+Paralelizar for:
+	- en OMP se usa #pragma omp for
+
+	- Se debe usar en una sección paralela
+
+	- La directiva  calcula cada iteración de inicio y fin
+
+	- Se puede decidir como se rompe el for:
+
+		- Se usa la cláusula schedule
+
+		- Deben ener un parametro chunk que es la cantidad de iteraciones que realiza cada hilo
+
+		- Es recomendado usar #pragma omp for schedule(dynamic, n)
+
+		- dynamic para que no importe el numero de hilos
+		- static para que importe el numero de hilos
+		- guided para que empiece con muchas iteraciones por hilo y luego menos
+
+		- Aplica false sharing, por lo que no hay que preocuarse por poner PAD
+
+	- Se puede crear una reduccion que se aplica sobre una pareja (operación, lista)
+
+		- Se puede paralelizar un for con una reducción con la sentencia #pragma omp parallel for reduction (+:variable)
+		ej: 
+		double ave, A[MAX]; int i;
+		#pragma omp parallel for reduction(+:ave)
+		for(i = 0; i < MAX; i++){
+			ave += A[i;]
+		}
+
+		ave = ave/MAX;
+
+		Este programa crea una reducción con la suma para calcular la media de un arreglo
