@@ -3,8 +3,8 @@
 #include <sys/time.h>
 
 #define iterations 1e09
-#define THREADS 32
-#define intentos 10 
+#define THREADS 16
+#define intentos 1
 // Funcion a paralelizar
 static void calculatePi(int ID, double * result){
 	int i = (iterations/THREADS) * ID, end = (iterations/THREADS) * (ID + 1);
@@ -28,8 +28,8 @@ int main(){
     double secs[intentos];
 
     for(int i = 0; i < intentos; i++){
-        printf("Begin run with %d threads\n", THREADS);
-        gettimeofday(&start, NULL);
+        //printf("Begin run with %d threads\n", THREADS);
+        //gettimeofday(&start, NULL);
         double results[THREADS];
         for(int i = 0; i < THREADS; i++) results[i] = 0;
         #pragma omp parallel num_threads(THREADS)// Inicio de region paralela
@@ -44,21 +44,21 @@ int main(){
         double final = 0;
         for(int i = 0; i < THREADS; i++) final += results[i];
 
-        gettimeofday(&stop, NULL);
+        /*gettimeofday(&stop, NULL);
 
         double sec = (double)(stop.tv_usec - start.tv_usec) / 1000000 + (double)(stop.tv_sec - start.tv_sec);
         secs[i] = sec;
-        printf("PI: %.15f. Time: %.15f\n", final, sec);
+        printf("PI: %.15f. Time: %.15f\n", final, sec);*/
     }
 
-    double sum = 0;
+    /*double sum = 0;
 
     for(int i = 0; i < intentos; i++) sum += secs[i];
 
     printf("%d: media: %.15f\n", THREADS,  sum/intentos);
     for(int i = 0; i < intentos; i++){
         printf("    - %.15f\n", secs[i]);
-    }
+    }*/
     
 
     return 0;

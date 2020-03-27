@@ -1,0 +1,11 @@
+Como implementar un Gaussion Blur:
+https://computergraphics.stackexchange.com/questions/39/how-is-gaussian-blur-implemented
+Como hacer un Gaussian kernel:
+https://stackoverflow.com/questions/8204645/implementing-gaussian-blur-how-to-calculate-convolution-matrix-kernel
+Libreria para leer imagenes
+http://www.libpng.org/pub/png/libpng.html
+https://github.com/nothings/stb
+Como usar STBI Lib
+https://stackoverflow.com/questions/2076475/reading-an-image-file-in-c-c
+Pixel Editor
+https://pixlr.com/x/
