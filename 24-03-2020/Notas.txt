@@ -1,0 +1,12 @@
+24-03-2020
+
+False sharing:
+
+	- Cuando se utiliza un arreglo para hacer computación paralela el protocolo de caché intentara mantener la coherncia de memoria por lo que realizara muchas operacines de lectura y escritura.
+	- La solución que propone Intel es crar un PAD, es decir que las direcciones de memoria esten separadas por una distancia de bits.
+	- Una distancia de 256 bits puede ser suficiente.
+	- Ej double arr[THEADS][PAD]. (THREADS = 8, PAD = 8);
+	
+-D_DEFAULT_SOURCE
+	
+para colocar las banderas en el notebook se usa //%cflags: -fopenmp
