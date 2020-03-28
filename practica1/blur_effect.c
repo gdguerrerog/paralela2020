@@ -20,8 +20,8 @@ double * * gaussianKernel(int size){
 
 int main() {
 
-    char * imgname = "GrandImg.jpg";
-    char * newImgName = "GrandImgBlur.jpg";
+    char * imgname = "img3.jpeg";//"icon.png";//"GrandImg.jpg";
+    char * newImgName = "img3Blur.jpeg";//"iconBlur.png";//"GrandImgBlur.jpg";
 
     /*
     Image img;
