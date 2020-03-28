@@ -28,9 +28,9 @@ bool readImage(char * name, Image * img){
     for(int i = 0; i < height; i++) image[i] = (Pixel *)malloc(width*sizeof(Pixel));
     
     for(int i = 0; i < width*height; i++){
-        image[i%height][i /height].R = rgb_image[3*i]; 
-        image[i%height][i /height].G = rgb_image[3*i + 1]; 
-        image[i%height][i /height].B = rgb_image[3*i + 2];    
+        image[i%height][i/height].R = rgb_image[3*i]; 
+        image[i%height][i/height].G = rgb_image[3*i + 1]; 
+        image[i%height][i/height].B = rgb_image[3*i + 2];    
     }
 
     stbi_image_free(rgb_image);
@@ -45,12 +45,12 @@ bool readImage(char * name, Image * img){
 void writeImage(Image * img, char * name){
 
     int width = img->width, height = img->height;
-    uint8_t* rgb_image = (uint8_t*)malloc(width*height*3);
+    uint8_t* rgb_image = (uint8_t*)malloc(width*height*3* sizeof(uint8_t));
 
     for(int i = 0; i < width*height; i++){
-        rgb_image[3 * i] = img->pixels[i/3][i % 3].R;
-        rgb_image[3 * i + 1] = img->pixels[i/3][i % 3].G;
-        rgb_image[3 * i + 2] = img->pixels[i/3][i % 3].B;
+        rgb_image[3 * i] = img->pixels[i % height][i/height].R;
+        rgb_image[(3 * i) + 1] = img->pixels[i % height][i/height].G;
+        rgb_image[(3 * i) + 2] = img->pixels[i % height][i/height].B;
     }
 
     stbi_write_png(name, width, height, 3, rgb_image, width*3);
