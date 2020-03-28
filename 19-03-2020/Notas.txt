@@ -52,3 +52,5 @@ int omp_get_max_threads() // Obtener el maximo de hilos del procesador
 Se puede usar sudo gcc -fopenmp -o calcPiOmp calcPiOmp.c; ./calcPiOmp 
 para compilar y ejecutar en el mismo comando
 
+Se puede usar el comando time antes de ejecutar un programa para conocer su tiempo de ejecución
+
