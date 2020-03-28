@@ -3,8 +3,10 @@
 #include <sys/time.h>
 
 #define iterations 1e09
-#define THREADS 16
-#define intentos 1
+
+#define THREADS 2
+#define intentos 10 
+
 // Funcion a paralelizar
 static void calculatePi(int ID, double * result){
 	int i = (iterations/THREADS) * ID, end = (iterations/THREADS) * (ID + 1);
