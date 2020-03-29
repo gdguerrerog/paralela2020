@@ -2,7 +2,7 @@
 #define M_PI 3.14159265358979323846
 
 double * * gaussianKernel(int size){
-    double sigma = 1, mean = size/2;
+    double sigma = 100, mean = size/2;
     double * * kernel = malloc(size * sizeof(double *));
     for(int i = 0; i < size; i++){
         kernel[i] = malloc(size * sizeof(double));
@@ -20,8 +20,8 @@ double * * gaussianKernel(int size){
 
 int main() {
 
-    char * imgname = "img2.jpg";//"icon.png";//"GrandImg.jpg";
-    char * newImgName = "img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
+    char * imgname = "img2.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
+    char * newImgName = "img2Blur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
 
     /*
     Image img;
@@ -29,7 +29,7 @@ int main() {
     writeImage(&img, newImgName);
     //*/
     //*
-    int ksize = 3;
+    int ksize = 31;
     int threads = 4;
 
     Image img;
@@ -67,6 +67,7 @@ int main() {
         newImage.pixels[i][j].R = rvalue/sum;
         newImage.pixels[i][j].G = gvalue/sum;
         newImage.pixels[i][j].B = bvalue/sum;
+
     }
 
     writeImage(&newImage, newImgName);
