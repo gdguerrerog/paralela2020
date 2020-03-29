@@ -42,17 +42,11 @@ bool readImage(char * name, Image * img){
         }
     }
 
-    /*for(int i = 0; i < width*height; i++){
-        image[i%height][i/height].R = rgb_image[3*i]; 
-        image[i%height][i/height].G = rgb_image[3*i + 1]; 
-        image[i%height][i/height].B = rgb_image[3*i + 2];    
-    }*/
-
     stbi_image_free(rgb_image);
-
-    img->pixels = image;
-    img->width = width;
-    img->height = height;
+    
+    (*img).pixels = image;
+    (*img).width = width;
+    (*img).height = height;
 
     return true;
 }

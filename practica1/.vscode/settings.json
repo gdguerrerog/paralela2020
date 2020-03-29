@@ -4,6 +4,7 @@
         "stb_image_write.h": "c",
         "typeinfo": "cpp",
         "file_system.h": "c",
-        "math.h": "c"
+        "math.h": "c",
+        "stdio.h": "c"
     }
 }
