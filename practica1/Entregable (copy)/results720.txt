@@ -1,0 +1,84 @@
+Tamaño del Kernel 3
+Numero de hilos 1
+Tiempo: 0.124213 segundos
+Tamaño del Kernel 3
+Numero de hilos 2
+Tiempo: 0.110002 segundos
+Tamaño del Kernel 3
+Numero de hilos 4
+Tiempo: 0.110120 segundos
+Tamaño del Kernel 3
+Numero de hilos 8
+Tiempo: 0.107417 segundos
+Tamaño del Kernel 5
+Numero de hilos 1
+Tiempo: 0.185978 segundos
+Tamaño del Kernel 5
+Numero de hilos 2
+Tiempo: 0.146502 segundos
+Tamaño del Kernel 5
+Numero de hilos 4
+Tiempo: 0.119687 segundos
+Tamaño del Kernel 5
+Numero de hilos 8
+Tiempo: 0.131660 segundos
+Tamaño del Kernel 7
+Numero de hilos 1
+Tiempo: 0.256898 segundos
+Tamaño del Kernel 7
+Numero de hilos 2
+Tiempo: 0.186562 segundos
+Tamaño del Kernel 7
+Numero de hilos 4
+Tiempo: 0.149336 segundos
+Tamaño del Kernel 7
+Numero de hilos 8
+Tiempo: 0.140666 segundos
+Tamaño del Kernel 9
+Numero de hilos 1
+Tiempo: 0.353752 segundos
+Tamaño del Kernel 9
+Numero de hilos 2
+Tiempo: 0.221178 segundos
+Tamaño del Kernel 9
+Numero de hilos 4
+Tiempo: 0.165953 segundos
+Tamaño del Kernel 9
+Numero de hilos 8
+Tiempo: 0.165079 segundos
+Tamaño del Kernel 11
+Numero de hilos 1
+Tiempo: 0.436755 segundos
+Tamaño del Kernel 11
+Numero de hilos 2
+Tiempo: 0.277694 segundos
+Tamaño del Kernel 11
+Numero de hilos 4
+Tiempo: 0.186276 segundos
+Tamaño del Kernel 11
+Numero de hilos 8
+Tiempo: 0.198278 segundos
+Tamaño del Kernel 13
+Numero de hilos 1
+Tiempo: 0.573350 segundos
+Tamaño del Kernel 13
+Numero de hilos 2
+Tiempo: 0.350309 segundos
+Tamaño del Kernel 13
+Numero de hilos 4
+Tiempo: 0.251169 segundos
+Tamaño del Kernel 13
+Numero de hilos 8
+Tiempo: 0.241758 segundos
+Tamaño del Kernel 15
+Numero de hilos 1
+Tiempo: 0.734845 segundos
+Tamaño del Kernel 15
+Numero de hilos 2
+Tiempo: 0.429500 segundos
+Tamaño del Kernel 15
+Numero de hilos 4
+Tiempo: 0.277630 segundos
+Tamaño del Kernel 15
+Numero de hilos 8
+Tiempo: 0.287006 segundos
