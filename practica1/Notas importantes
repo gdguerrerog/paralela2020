@@ -1,2 +1,2 @@
--   Compilar con gcc blur_effect.c -o blur_effect -lm
+-   Compilar con gcc blur_effect.c -o blur_effect -lm -pthread
     - El lm es para que reconozca algunas librerias
