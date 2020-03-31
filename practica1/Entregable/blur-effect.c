@@ -1,7 +1,7 @@
 #include "file_system.h"
 #define M_PI 3.14159265358979323846
 #include "omp.h"
-
+#include <sys/time.h>
 /**
  * bsize represents the block size of the blockwise sistem
  * threads represent the number of threads of the algorithm
@@ -58,12 +58,14 @@ bool getInterval(int *ix, int * iy, int *ex, int * ey){
 }
 
 int main(int argc, char **argv) {
+    struct timeval start, stop, diff;
+    gettimeofday(&start, NULL);
     
     char * imgname = argv[1]; 		// "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
     char * newImgName = argv[2];	//"GrandImgBlur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
 	ksize = atoi(argv[3]);
 	threads = atoi(argv[4]);
-    printf("Ejecutando programa con:\n\t- %d threads\n\t- %d tamaño del kernel\n\t- %d tamaño de bloque\n\t- %.3f sigma\n", threads, ksize, bsize, sigma);
+    //printf("Ejecutando programa con:\n\t- %d threads\n\t- %d tamaño del kernel\n\t- %d tamaño de bloque\n\t- %.3f sigma\n", threads, ksize, bsize, sigma);
  
     // Even kernel size
     if((ksize & 1) == 0){
@@ -78,7 +80,7 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    printf("Imagen %s cargada\n", imgname);
+    //printf("Imagen %s cargada\n", imgname);
 
     // NewImage instance
     newImg =  malloc(sizeof(Image));
@@ -142,6 +144,11 @@ int main(int argc, char **argv) {
     // Free on images
     freeImage(img);
     freeImage(newImg);
+
+
+    gettimeofday(&stop, NULL);
+    timersub(&stop, &start, &diff);
+    printf("Tiempo: %ld.%06ld\n", (long int) diff.tv_sec, (long int) diff.tv_usec);
 
     return 0;
 }

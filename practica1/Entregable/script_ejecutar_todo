@@ -23,19 +23,24 @@ while [ $cont == "continue" ]; do
 
 	
 	
-	gcc blur-effect.c -o blur_effect -lm -fopenmp
-	timevars=time ./blur-effect "$input" "$output" "$skernel" "$nhilos"
+	gcc blur-effect.c -o blur-effect -lm -fopenmp
+	timevars=$(time ./blur-effect "$input" "$output" "$skernel" "$nhilos")
 	
 	if [ $first -lt 0 ]; then
-		echo Imagen $input con tamaño de Kernel $skernel y numero de hilos $nhilos con resultado en archivo $output tiempos: >results.txt
+		echo Entrada $input >results.txt
 	else
-		echo Imagen $input con tamaño de Kernel $skernel y numero de hilos $nhilos con resultado en archivo $output tiempos: >>results.txt
+		echo Entrada $input >>results.txt
 	fi	
 	
-	echo $timevars;
+	echo Salida $output >>results.txt
+	echo Tamaño del Kernel $skernel >>results.txt
+	echo Numero de hilos $nhilos >>results.txt
+	
+	echo $timevars segundos>>results.txt
+	
 	
 	first=1;
-	echo Si desea ingresar mas imagenes escriba \"continue\" de lo contrario presione enter	
+	echo Si desea ingresar mas imagenes digite \"continue\" de lo contrario digite cualquier otro valor	
 	read cont
 	
 

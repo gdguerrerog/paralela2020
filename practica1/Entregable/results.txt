@@ -1,1 +1,0 @@
-Imagen img2.jpg con tamaño de Kernel 15 y numero de hilos 8 con resultado en archivo sout.png tiempos:
