@@ -1,0 +1,60 @@
+31-03-2020
+
+Hay varias formas de barreras por ejemplo enuna sentencia
+
+#pragma omp paralel
+{
+    // Parallel code
+} <- Barrier
+
+El corchete de cierre atua como una barrera, al igual que en la sentencia
+
+#pragma omp for
+for(int i = 0; i < n; i++){
+    // Parallel code
+} <- Barrier
+
+El corchete de cierre del ciclo tambien actua como una barrera
+
+Se puede usar la sentencia
+#pragma omp for nowait
+para quitar la propiedad de barrera que tiene el corchete del for
+
+#pragma omp master
+Codigo que solo va a ser ejecutado por un hilo maestro
+
+#pragma omp single
+Codigo que solo va a ser ejecutado por un hilo
+
+#pragma omp sections
+{
+    #pragma omp section
+    // Parallel code 1
+    #pragma omp section
+    // Parallel code 2
+    #pragma omp section
+    // Parallel code 2
+} <- Barrier
+
+Con sections cada hilo puede hacer tareas diferentes. Hay una barrera al final de la sección
+Cada sección es de un solo hilo. Si hay 3 secciones y 8 hilos solo se usaran 3 hilos para ejecutar
+
+Hay rutinas en tiempo de ejecución como:
+omp_in_parallel() // Esta en una region paralela
+omp_get_num_procs() // Numero de procesadores de una máquina
+
+Hay variables que son compartidas entre los hilos. Estas son las que estan fuera de una función o las creadas antes de la sección paralela
+
+Las que se creen dentro de una sección paralela seran por cada hilo
+
+Se puede usar la clausula private(var) para definir una variable para un hilo especifico. 
+Se puede usar lastprivate(var) para copiar en una variable que no esta dentro de una sección paralela su valor final en la última iteración
+
+int x = 0;
+#pragma omp parallel for lastprivate(x);
+
+
+Existen programas llamados perfiladores que sirven para saber en donde se demora mas un programa.
+Uno muy famoso es gprof. Para compilar para este se usa -pg -no-pie
+-pg es añadir la libreria gprof
+Se ejecuta el programa y despues se usa el comando gprof -b nombreexe gmon.out

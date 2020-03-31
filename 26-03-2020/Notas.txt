@@ -53,3 +53,5 @@ Paralelizar for:
 		ave = ave/MAX;
 
 		Este programa crea una reducción con la suma para calcular la media de un arreglo
+
+		En la comparación del for tanto i como MAX deben ser variables.
