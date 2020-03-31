@@ -1,84 +1,105 @@
 Tamaño del Kernel 3
 Numero de hilos 1
-Tiempo: 0.124213 segundos
+Tiempo: 0.126750 segundos
 Tamaño del Kernel 3
 Numero de hilos 2
-Tiempo: 0.110002 segundos
+Tiempo: 0.116554 segundos
 Tamaño del Kernel 3
 Numero de hilos 4
-Tiempo: 0.110120 segundos
+Tiempo: 0.110314 segundos
 Tamaño del Kernel 3
 Numero de hilos 8
-Tiempo: 0.107417 segundos
+Tiempo: 0.110169 segundos
+Tamaño del Kernel 3
+Numero de hilos 16
+Tiempo: 0.105579 segundos
 Tamaño del Kernel 5
 Numero de hilos 1
-Tiempo: 0.185978 segundos
+Tiempo: 0.167974 segundos
 Tamaño del Kernel 5
 Numero de hilos 2
-Tiempo: 0.146502 segundos
+Tiempo: 0.137085 segundos
 Tamaño del Kernel 5
 Numero de hilos 4
-Tiempo: 0.119687 segundos
+Tiempo: 0.141207 segundos
 Tamaño del Kernel 5
 Numero de hilos 8
-Tiempo: 0.131660 segundos
+Tiempo: 0.138971 segundos
+Tamaño del Kernel 5
+Numero de hilos 16
+Tiempo: 0.121440 segundos
 Tamaño del Kernel 7
 Numero de hilos 1
-Tiempo: 0.256898 segundos
+Tiempo: 0.248410 segundos
 Tamaño del Kernel 7
 Numero de hilos 2
-Tiempo: 0.186562 segundos
+Tiempo: 0.181583 segundos
 Tamaño del Kernel 7
 Numero de hilos 4
-Tiempo: 0.149336 segundos
+Tiempo: 0.146284 segundos
 Tamaño del Kernel 7
 Numero de hilos 8
-Tiempo: 0.140666 segundos
+Tiempo: 0.147921 segundos
+Tamaño del Kernel 7
+Numero de hilos 16
+Tiempo: 0.140340 segundos
 Tamaño del Kernel 9
 Numero de hilos 1
-Tiempo: 0.353752 segundos
+Tiempo: 0.334659 segundos
 Tamaño del Kernel 9
 Numero de hilos 2
-Tiempo: 0.221178 segundos
+Tiempo: 0.225761 segundos
 Tamaño del Kernel 9
 Numero de hilos 4
-Tiempo: 0.165953 segundos
+Tiempo: 0.163562 segundos
 Tamaño del Kernel 9
 Numero de hilos 8
-Tiempo: 0.165079 segundos
+Tiempo: 0.166439 segundos
+Tamaño del Kernel 9
+Numero de hilos 16
+Tiempo: 0.161928 segundos
 Tamaño del Kernel 11
 Numero de hilos 1
-Tiempo: 0.436755 segundos
+Tiempo: 0.446463 segundos
 Tamaño del Kernel 11
 Numero de hilos 2
-Tiempo: 0.277694 segundos
+Tiempo: 0.278830 segundos
 Tamaño del Kernel 11
 Numero de hilos 4
-Tiempo: 0.186276 segundos
+Tiempo: 0.195913 segundos
 Tamaño del Kernel 11
 Numero de hilos 8
-Tiempo: 0.198278 segundos
+Tiempo: 0.197064 segundos
+Tamaño del Kernel 11
+Numero de hilos 16
+Tiempo: 0.194580 segundos
 Tamaño del Kernel 13
 Numero de hilos 1
-Tiempo: 0.573350 segundos
+Tiempo: 0.580582 segundos
 Tamaño del Kernel 13
 Numero de hilos 2
-Tiempo: 0.350309 segundos
+Tiempo: 0.348557 segundos
 Tamaño del Kernel 13
 Numero de hilos 4
-Tiempo: 0.251169 segundos
+Tiempo: 0.234471 segundos
 Tamaño del Kernel 13
 Numero de hilos 8
-Tiempo: 0.241758 segundos
+Tiempo: 0.239826 segundos
+Tamaño del Kernel 13
+Numero de hilos 16
+Tiempo: 0.250785 segundos
 Tamaño del Kernel 15
 Numero de hilos 1
-Tiempo: 0.734845 segundos
+Tiempo: 0.765315 segundos
 Tamaño del Kernel 15
 Numero de hilos 2
-Tiempo: 0.429500 segundos
+Tiempo: 0.447279 segundos
 Tamaño del Kernel 15
 Numero de hilos 4
-Tiempo: 0.277630 segundos
+Tiempo: 0.271295 segundos
 Tamaño del Kernel 15
 Numero de hilos 8
-Tiempo: 0.287006 segundos
+Tiempo: 0.293979 segundos
+Tamaño del Kernel 15
+Numero de hilos 16
+Tiempo: 0.280087 segundos
