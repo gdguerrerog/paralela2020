@@ -5,15 +5,13 @@ cont="continue"
 skernel=20
 first=-1;
 timevars=""
-input="720.jpg"
-output="720fin.png"
+input="1080.jpg"
+output="1080.png"
 
 for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
 	echo v2 Kernel: $v2
-	for ((v3 = 1; v3 <9 ; v3=(v3*2))); do	
+	for ((v3 = 1; v3 <17 ; v3=(v3*2))); do	
 		echo v3 hilos: $v3
-		for ((v1 = 1; v1 <= 1; v1++)); do
-			echo v1 prueba: $v1
 			
 			
 			#echo Ingrese el nombre de la imagen a difuminar
@@ -53,8 +51,6 @@ for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
 			#read cont
 
 	
-		done
-		#echo " Inner loop: $v2"
 
 	done
 
