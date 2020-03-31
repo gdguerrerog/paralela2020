@@ -1,7 +1,7 @@
 #include "file_system.h"
 #define M_PI 3.14159265358979323846
-#include "omp.h"
-
+#include <pthread.h>
+#include <sys/time.h>
 /**
  * bsize represents the block size of the blockwise sistem
  * threads represent the number of threads of the algorithm
@@ -12,6 +12,8 @@ int bsize = 32, threads = 4, ksize = 12;
 double sigma = 10;
 
 Image *img, *newImg;
+
+double * * kernel;
 
 double * * gaussianKernel(int size){
     double mean = size/2;
@@ -28,40 +30,57 @@ double * * gaussianKernel(int size){
     return kernel;
 }
 
-/**
- * @description:  Función que retorna el intervaloen el que debe actuar un hilo 
- * @param ix: initial x
- * @param iy: initial y
- * @param ex: end x
- * @param ey: end y
- * @return: False si no hay mas intervalos, True en otro caso
- */ 
-bool getInterval(int *ix, int * iy, int *ex, int * ey){
-    static int cx = 0, cy = 0;
+static void * blurCalc(void* params){
+    int * thread_id = (int *) params;
+    // RGB Values
+    double rvalue, gvalue, bvalue, sum;
 
-    // End of img
-    if(cy * bsize > img->height) return false;
+    // Initial x, y and End x, y
+    int ix, iy, ex, ey;
 
-    *ix = cx * bsize;  *iy = cy * bsize;
-    *ex = (cx + 1) * bsize;  *ey = (cy + 1) * bsize;
+    // Each thread will make complete rows
+    ix = 0;
+    ex = img->width;
 
-    // Continue in line
-    if(cx * bsize <= img->width) cx++;
-    // End of line
-    else {
-        cx = 0;
-        cy++;
+    // Thre problme will be break on the columns of the img
+    // Each thread will make width/threads columns of the image
+    iy = img->height * *thread_id/threads;
+    ey = img->height * (*thread_id + 1)/threads;
+
+    printf("Runing thread %u from (%d, %d) to (%d, %d)\n", * thread_id, ix, iy, ex, ey);
+
+    for(int i = iy; i <= ey && i < newImg->height; i++) for(int j = ix; j <= ex && j < newImg->width; j++){
+        rvalue = gvalue = bvalue = sum = 0;
+        // For each location in kernel
+        for(int k = -1 * ksize/2; k <= ksize/2; k++) for(int l = -1 * ksize/2; l <= ksize/2; l++) {
+            if(i + k < 0 || i + k >= newImg->height || j + l < 0 || j + l >= newImg->width) continue;
+            
+            rvalue += img->pixels[i + k][j + l].R * kernel[k + ksize/2][l + ksize/2];
+            gvalue += img->pixels[i + k][j + l].G * kernel[k + ksize/2][l + ksize/2];
+            bvalue += img->pixels[i + k][j + l].B * kernel[k + ksize/2][l + ksize/2];
+
+            // For normalization
+            sum += kernel[k + ksize/2][l + ksize/2];
+        }
+
+
+        // Saving calculated values
+        newImg->pixels[i][j].R = rvalue/sum;
+        newImg->pixels[i][j].G = gvalue/sum;
+        newImg->pixels[i][j].B = bvalue/sum;
+        //printf("Saving in location (%d, %d) value [%d;%d;%d]\n", i, j, newImg->pixels[i][j].R, newImg->pixels[i][j].G, newImg->pixels[i][j].B);
     }
-
-
-    return true;
 }
 
-int main() {
-
-    char * imgname = "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
-    char * newImgName = "GrandImgBlur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
-
+int main(int argc, char **argv) {
+    // For time stamp
+    struct timeval start, stop, diff;
+    gettimeofday(&start, NULL);
+    
+    char * imgname = argv[1]; 		// "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
+    char * newImgName = argv[2];	//"GrandImgBlur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
+	ksize = atoi(argv[3]);
+	threads = atoi(argv[4]);
     printf("Ejecutando programa con:\n\t- %d threads\n\t- %d tamaño del kernel\n\t- %d tamaño de bloque\n\t- %.3f sigma\n", threads, ksize, bsize, sigma);
  
     // Even kernel size
@@ -84,63 +103,48 @@ int main() {
     newImg->height = img->height;
     newImg->width = img->width;
 
-    Pixel * * pixels = (Pixel * * )malloc(newImg->height*sizeof(Pixel *));
+    Pixel * * pixels = (Pixel * *) malloc(newImg->height*sizeof(Pixel *));
     for(int i = 0; i < newImg->height; i++) pixels[i] = (Pixel *)malloc(newImg->width*sizeof(Pixel));
 
     newImg->pixels = pixels;
 
 
     // Kernel
-    double * * kernel = gaussianKernel(ksize);
+    kernel = gaussianKernel(ksize);
 
-    // Paralel region
-    omp_set_num_threads(threads);
-    #pragma omp parallel
-    {
-        // Interval to proccess
-        int ix, iy, ex, ey;
-        // Detects if thread must end
-        bool tmp;
+    // Paralel Setup
+    pthread_t * thread_ids = (pthread_t *)malloc(threads * sizeof(pthread_t));
+    int * params = (int *)malloc(threads * sizeof(int)); 
 
-        // RGB Values
-        double rvalue, gvalue, bvalue, sum;
-        while(true){
-            // Get next interval to process
-            #pragma omp critical
-            tmp = getInterval(&ix, &iy, &ex, &ey);
-
-            if(!tmp) break;
-
-            // For each pixel in interval and in image
-            for(int i = iy; i <= ey && i < newImg->height; i++) for(int j = ix; j <= ex && j < newImg->width; j++){
-                rvalue = gvalue = bvalue = sum = 0;
-                // For each location in kernel
-                for(int k = -1 * ksize/2; k <= ksize/2; k++) for(int l = -1 * ksize/2; l <= ksize/2; l++) {
-                    if(i + k < 0 || i + k >= newImg->height || j + l < 0 || j + l >= newImg->width) continue;
-                    
-                    rvalue += img->pixels[i + k][j + l].R * kernel[k + ksize/2][l + ksize/2];
-                    gvalue += img->pixels[i + k][j + l].G * kernel[k + ksize/2][l + ksize/2];
-                    bvalue += img->pixels[i + k][j + l].B * kernel[k + ksize/2][l + ksize/2];
-
-                    // For normalization
-                    sum += kernel[k + ksize/2][l + ksize/2];
-                }
-
-
-                // Saving calculated values
-                newImg->pixels[i][j].R = rvalue/sum;
-                newImg->pixels[i][j].G = gvalue/sum;
-                newImg->pixels[i][j].B = bvalue/sum;
-            }
-        }
+    // Thread Creation
+    for(int i = 0; i < threads; i++){
+        printf("Launching thread %d\n", i);
+        params[i] = i;
+        pthread_create(&thread_ids[i], NULL, &blurCalc, &params[i]);
+        printf("Launched thread %d with id %ld\n", i, thread_ids[i]);
     }
+
+    // Thread Join
+    for(int i = 0; i < threads; i++){
+        printf("Joining thread %d\n", i);
+        pthread_join(thread_ids[i], NULL);
+    }
+    
 
     // Save new image
     writeImage(newImg, newImgName);
 
-    // Free on images
+    // Free
+    free(thread_ids);
+    free(params);
+
     freeImage(img);
     freeImage(newImg);
+
+
+    gettimeofday(&stop, NULL);
+    timersub(&stop, &start, &diff);
+    printf("Tiempo: %ld.%06ld\n", (long int) diff.tv_sec, (long int) diff.tv_usec);
 
     return 0;
 }

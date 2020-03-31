@@ -5,6 +5,8 @@
         "typeinfo": "cpp",
         "file_system.h": "c",
         "math.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "types.h": "c",
+        "unistd.h": "c"
     }
 }
