@@ -6,7 +6,7 @@ skernel=20
 first=-1;
 timevars=""
 while [ $cont == "continue" ]; do
-	skernel=20
+	skernel=0
 	echo Ingrese el nombre de la imagen a difuminar
 	read input
 	

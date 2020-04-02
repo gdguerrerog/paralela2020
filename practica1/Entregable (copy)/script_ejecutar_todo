@@ -5,8 +5,8 @@ cont="continue"
 skernel=20
 first=-1;
 timevars=""
-input="1080.jpg"
-output="1080.png"
+input="4k.jpg"
+output="4k.png"
 
 for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
 	echo v2 Kernel: $v2

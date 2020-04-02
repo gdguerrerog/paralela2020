@@ -86,4 +86,5 @@ void printImage(Image * img){
 void freeImage(Image * img){
     for(int i = 0 ; i < img->height; i++) free(img->pixels[i]);
     free(img->pixels);
+    free(img);
 }
