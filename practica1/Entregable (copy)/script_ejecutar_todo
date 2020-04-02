@@ -5,7 +5,7 @@ cont="continue"
 skernel=20
 first=-1;
 timevars=""
-input="4k.jpg"
+input="720.jpg"
 output="4k.png"
 
 for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
@@ -30,7 +30,7 @@ for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
 
 			
 			
-			gcc blur-effect.c -o blur-effect -lm -fopenmp
+			gcc blur-effect.c -o blur-effect -lm -pthread
 			timevars=$(time ./blur-effect "$input" "$output" "$v2" "$v3")
 			
 			#if [ $first -lt 0 ]; then

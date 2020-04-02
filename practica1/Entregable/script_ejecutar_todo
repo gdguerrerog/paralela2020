@@ -20,10 +20,8 @@ while [ $cont == "continue" ]; do
 
 	echo Ingrese el numero de hilos
 	read nhilos
-
 	
-	
-	gcc blur-effect.c -o blur-effect -lm -fopenmp
+	gcc blur-effect.c -o blur-effect -lm -pthread
 	timevars=$(time ./blur-effect "$input" "$output" "$skernel" "$nhilos")
 	
 	if [ $first -lt 0 ]; then

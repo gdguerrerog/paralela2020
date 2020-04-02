@@ -2,17 +2,17 @@
 #define M_PI 3.14159265358979323846
 #include <pthread.h>
 #include <sys/time.h>
+
 /**
  * bsize represents the block size of the blockwise sistem
  * threads represent the number of threads of the algorithm
  * ksize represents the kernel size
  * sigma represents the standard deviation of the kernel
  */ 
+
 int bsize = 32, threads = 4, ksize = 12;
 double sigma = 10;
-
 Image *img, *newImg;
-
 double * * kernel;
 
 double * * gaussianKernel(int size){
@@ -25,8 +25,6 @@ double * * gaussianKernel(int size){
                          / (2 * M_PI * sigma * sigma);
         }
     }
-
-
     return kernel;
 }
 
