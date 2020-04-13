@@ -1,0 +1,10 @@
+Entrada 4k.png
+Salida 4kBLur.png
+Tamaño del Kernel 31
+Numero de hilos 8
+4k.png: ERROR LEYENDO IMAGEN segundos
+Entrada 4k.jpg
+Salida 4kBlur.png
+Tamaño del Kernel 31
+Numero de hilos 8
+Tiempo: 101.953613 segundos
