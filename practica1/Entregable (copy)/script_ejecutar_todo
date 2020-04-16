@@ -5,14 +5,22 @@ cont="continue"
 skernel=20
 first=-1;
 timevars=""
-input="720.jpg"
-output="4k.png"
+input="4k.jpg"
+output="780salida.png"
+
+gcc blur-effect.c -o blur-effect -lm -pthread
 
 for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
+
+	echo Tamaño del Kernel $v2 >>results.txt
 	echo v2 Kernel: $v2
-	for ((v3 = 1; v3 <17 ; v3=(v3*2))); do	
-		echo v3 hilos: $v3
-			
+	for ((v3=1; v3 <17 ; v3=(v3*2))); do	
+		echo Numero de hilos $v3 >>results.txt
+		#echo v3 hilos: $v3
+					
+			for ((v1 = 1; v1 < 4 ; v1++)); do
+			echo Prueba \# $v1 >>results.txt	
+			#echo v1 prueba: $v1
 			
 			#echo Ingrese el nombre de la imagen a difuminar
 			#read input
@@ -30,7 +38,7 @@ for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
 
 			
 			
-			gcc blur-effect.c -o blur-effect -lm -pthread
+			
 			timevars=$(time ./blur-effect "$input" "$output" "$v2" "$v3")
 			
 			#if [ $first -lt 0 ]; then
@@ -40,18 +48,16 @@ for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
 			#fi	
 			
 			#echo Salida $output >>results.txt
-			echo Tamaño del Kernel $v2 >>results.txt
-			echo Numero de hilos $v3 >>results.txt
+			
 			
 			echo $timevars segundos>>results.txt
+		
 			
-			
-			first=1;
+			#first=1;
 			#echo Si desea ingresar mas imagenes digite \"continue\" de lo contrario digite cualquier otro valor	
 			#read cont
 
-	
-
+		done
 	done
 
 done
