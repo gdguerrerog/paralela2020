@@ -5,60 +5,42 @@ cont="continue"
 skernel=20
 first=-1;
 timevars=""
-input="4k.jpg"
-output="780salida.png"
+while [ $cont == "continue" ]; do
+	skernel=0
+	echo Ingrese el nombre de la imagen a difuminar
+	read input
+	
+	echo Ingrese el nombre de la imagen nueva
+	read output
 
-gcc blur-effect.c -o blur-effect -lm -pthread
+	while [ $skernel -gt 100 ] || [ $skernel -lt 3 ]; do
+		echo Ingrese el tamaño del kernel \(Entre 3 y 15\)
+		read skernel
+	done	
 
-for ((v2 = 3; v2 <= 15; v2=(v2+2))); do
-
-	echo Tamaño del Kernel $v2 >>results.txt
-	echo v2 Kernel: $v2
-	for ((v3=1; v3 <17 ; v3=(v3*2))); do	
-		echo Numero de hilos $v3 >>results.txt
-		#echo v3 hilos: $v3
-					
-			for ((v1 = 1; v1 < 4 ; v1++)); do
-			echo Prueba \# $v1 >>results.txt	
-			#echo v1 prueba: $v1
-			
-			#echo Ingrese el nombre de la imagen a difuminar
-			#read input
-			
-			#echo Ingrese el nombre de la imagen nueva
-			#read output
-
-			#while [ $skernel -gt 15 ] || [ $skernel -lt 3 ]; do
-			#	echo Ingrese el tamaño del kernel \(Entre 3 y 15\)
-			#	read skernel
-			#done	
-
-			#echo Ingrese el numero de hilos
-			#read nhilos
-
-			
-			
-			
-			timevars=$(time ./blur-effect "$input" "$output" "$v2" "$v3")
-			
-			#if [ $first -lt 0 ]; then
-			#	echo Entrada $input >results.txt
-			#else
-			#	echo Entrada $input >>results.txt
-			#fi	
-			
-			#echo Salida $output >>results.txt
-			
-			
-			echo $timevars segundos>>results.txt
-		
-			
-			#first=1;
-			#echo Si desea ingresar mas imagenes digite \"continue\" de lo contrario digite cualquier otro valor	
-			#read cont
-
-		done
-	done
+	echo Ingrese el numero de hilos
+	read nhilos
+	
+	gcc blur-effect.c -o blur-effect -lm -fopenmp
+	timevars=$(time ./blur-effect "$input" "$output" "$skernel" "$nhilos")
+	
+	if [ $first -lt 0 ]; then
+		echo Entrada $input >results.txt
+	else
+		echo Entrada $input >>results.txt
+	fi	
+	
+	echo Salida $output >>results.txt
+	echo Tamaño del Kernel $skernel >>results.txt
+	echo Numero de hilos $nhilos >>results.txt
+	
+	echo $timevars segundos>>results.txt
+	
+	
+	first=1;
+	echo Si desea ingresar mas imagenes digite \"continue\" de lo contrario digite cualquier otro valor	
+	read cont
+	
 
 done
 

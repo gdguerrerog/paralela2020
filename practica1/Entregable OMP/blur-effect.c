@@ -35,8 +35,8 @@ int main(int argc, char **argv) {
     
     char * imgname = argv[1]; 		// "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
     char * newImgName = argv[2];	//"GrandImgBlur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
-	ksize = atoi(argv[3]);
-	threads = atoi(argv[4]);
+    ksize = atoi(argv[3]);
+    threads = atoi(argv[4]);
     //printf("Ejecutando programa con:\n\t- %d threads\n\t- %d tamaño del kernel\n\t- %d tamaño de bloque\n\t- %.3f sigma\n", threads, ksize, bsize, sigma);
  
     // Even kernel size
