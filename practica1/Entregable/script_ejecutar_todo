@@ -13,7 +13,7 @@ while [ $cont == "continue" ]; do
 	echo Ingrese el nombre de la imagen nueva
 	read output
 
-	while [ $skernel -gt 15 ] || [ $skernel -lt 3 ]; do
+	while [ $skernel -gt 100 ] || [ $skernel -lt 3 ]; do
 		echo Ingrese el tamaño del kernel \(Entre 3 y 15\)
 		read skernel
 	done	

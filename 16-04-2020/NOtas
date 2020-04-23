@@ -1,0 +1,60 @@
+16-04-2020
+CUDA
+
+Solo funciona con tarjetas NVIDIA
+
+¿Para que una tarjeta gráfica?
+    - Para generar gráficos
+    - Se necesita una gran capacidad de coputo para mostrar imagenes
+    - Cáclculos físicos
+    - Renderizado, Texturas
+    - Un procesador normal puede geerar los gráficos basicos necesarios para un sistema operativo 
+
+La idea del uso de una tarjeta gráfica es que cuado hubiera una tarea sobre gráficos, se enviara la información a la tarjeta gráfica y esta enviara los resultados al programa principal. 
+Es ayudar al procesador central con tareas. EL procesador central actua como maestro y la targeta gráfica actua como esclavo
+
+Los graficos generalemnte son programas altamente paralelizables, Son tareas aritmerico-lógicas
+
+Las tarjetas gráficas tienen una memoria interna aparte de la memoria del computador. Esto implica que no se puede acceder a algunas llamadas del sistema desde la tarjeta gráfica (printf, open, close, write, pipe, socket, etc).
+Se pueden hacer operaciones aritmericológicas, como sumas, restas, multiplicaciones, divisiones, AND, OR, XOR, etc
+
+Para correr un programa en una tarjeta grafica se usa la libreria cudart.h (CUDA Run Time), lo que hace que el programa se transale temporalmente el programa a la tarjeta gráfica
+
+CUDA es un conjunto de herramientas, una API o unas librerias para poder desarrollar programas de proposito general sobre tarjetas gráficas. 
+
+CUDA esta soportado en diferentes lenguajes de programación
+(C, C++, etc)
+ compilador de envidia:
+    nvcc myobj.cu -o exit
+        |
+        v
+    nvidia c compiler
+
+Hay muchas librerias en developer.nvidia.com/cuda-tools-ecosystem
+
+OpenACC es una libreria (paga) que funciona sismilar a OpenMP para hacer computación paralela con CUDA
+
+Hay cuda en MATLAB, Mathematica, LabView Fortran (CUDA Nativo), c (CUDA Nativo), c++ (CUDA Nativo), python,  F#
+
+----------------------------------------------------------------------------
+|Cada version de CUDA esta asociada a una version de compilador de c y c++.|
+----------------------------------------------------------------------------
+
+Se debe instalar CUDA en función del compilador que se tenga.
+
+www.nvidia.com/getcuda
+www.nvidia.com/nsigth
+
+Si se tienen mas de 1 tarjeta gráfica se deben deshabilitar una tareta para poder instalar correctamente los drivers
+
+
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+
+CUDA c/c++ BASICS
+
+Compute Unified Device Architecture
+
+NVIDIA jetson es una tarjeta gráfica para desarrollo
+NVIDIA tesla es una tarjeta gráfica para cálculos científicos
+
