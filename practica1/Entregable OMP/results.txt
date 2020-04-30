@@ -1,0 +1,5 @@
+Entrada 720.jpg
+Salida 720-blur.jpg
+Tamaño del Kernel 15
+Numero de hilos 15
+Tiempo: 0.515128 segundos

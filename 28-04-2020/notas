@@ -1,0 +1,18 @@
+28-04-2020
+
+Para usar la memoria compartida de un bloque o de un micropo¿rocesadr se usa __shared__
+Ej:
+
+__shared__ int tmp[5]; // tmp esta en la memoria compartida
+
+Para crear una barrera se puede usar la funcion void __syncthreads();
+
+irse a usr/local/CUDA/1_uilities/ y lanzar el programa deviceQuery
+
+hacer el calulo de PI
+
+
+cd /usr/local/cuda/samples/1_Utilities/deviceQuery
+ls
+make
+./deviceQuery

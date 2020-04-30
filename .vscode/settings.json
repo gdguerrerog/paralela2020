@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.cu": "c",
+        "cstdlib": "c",
+        "*.cuh": "c",
+        "helper_cuda.h": "c"
+    }
+}
