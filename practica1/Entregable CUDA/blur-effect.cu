@@ -9,9 +9,6 @@
 #include <cuda.h>
 #include <helper_cuda.h>
 
-#define THREADS_PER_CORE 2
-#define BLOCKS_PER_MP 2
-
 /**
  * bsize represents the block size of the blockwise sistem
  * threads represent the number of threads of the algorithm
@@ -19,7 +16,8 @@
  * sigma represents the standard deviation of the kernel
  */ 
 
-int bsize = 32, threads = 4, ksize = 12;
+int bsize = 32,  ksize = 15;
+double threadsPerCore = 2;
 double sigma = 10;
 Image *img, *newImg;
 double * * kernel;
@@ -38,9 +36,37 @@ double * * gaussianKernel(int size){
 }
 
 
-__global__ void blur(uint8_t * red, uint8_t * redNewDevice, int width, int height){
-    printf("Here\n");
-    for(int i = 0; i < width * height; i++) redNewDevice[i] = red[i];
+__global__  
+void blur(uint8_t * color, uint8_t * newColor, double * kernel, int ksize, int imgWidth, int imgHeight, int iterations){
+    
+    int i;
+
+    // Put on shared memory the kernel
+    extern __shared__ double skernel[];
+
+    for (i = threadIdx.x; i < ksize*ksize; i += blockDim.x) {
+        skernel[i] = kernel[i];
+    }
+    __syncthreads();
+
+    int index = blockIdx.x*blockDim.x+threadIdx.x;
+    int x, y, k, l;
+    double sum, cColor;
+    for (i = iterations*index; i < iterations*(index + 1) && i < imgWidth*imgHeight; i++){
+        x = i % imgWidth;
+        y = i / imgWidth;
+        sum = cColor = 0;
+        // For each location in kernel
+        for(k = ksize/-2; k <= ksize/2; k++) for(l = ksize/-2; l <= ksize/2; l++) {
+            if(y + k < 0 || y + k >= imgHeight || x + l < 0 || x + l >= imgWidth) continue;
+            
+            cColor += color[(y + k)*imgWidth + x + l] * skernel[(k + ksize/2)*ksize + l + ksize/2];
+            // For normalization
+            sum += skernel[(k + ksize/2)*ksize + l + ksize/2];
+        }        
+
+        newColor[i] = cColor/sum;
+    }
 }
 
 int main(int argc, char **argv) {
@@ -50,9 +76,10 @@ int main(int argc, char **argv) {
     struct timeval start, stop, diff;
     gettimeofday(&start, NULL);
     
-    char * imgname = "LittleRGB.jpg"; //argv[1]; 		// "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
+    char * imgname = argv[1]; 		// "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
+    char * newImgName = argv[2];	//"GrandImgBlur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
     ksize = atoi(argv[3]);
-    threads = atoi(argv[4]);
+    threadsPerCore = atof(argv[4]);
     //printf("Ejecutando programa con:\n\t- %d threads\n\t- %d tamaño del kernel\n\t- %d tamaño de bloque\n\t- %.3f sigma\n", threads, ksize, bsize, sigma);
  
     // Even kernel size
@@ -68,93 +95,73 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    //printf("Imagen %s cargada\n", imgname);
+    printf("Imagen %s cargada\n", imgname);
 
     // Kernel
     kernel = gaussianKernel(ksize);
     
-    // Parallel setup
+    ///////////////////////////////////////Parallel setup/////////////////////////////////////
 
+    //CARD INFO
+    cudaSetDevice(0);
+    cudaDeviceProp deviceProp;
+    cudaGetDeviceProperties(&deviceProp, 0);
+
+    int BLOCKS = 2 * deviceProp.multiProcessorCount, THREADS = threadsPerCore * _ConvertSMVer2Cores(deviceProp.major, deviceProp.minor);
+
+    // Alloc Kernel in memory
+    double * kDevice;
+    cudaMalloc(&kDevice, ksize*ksize*sizeof(double));
+    for(int i = 0; i < ksize; i++){
+        cudaMemcpy(kDevice + i*ksize, kernel[i], ksize*sizeof(double), cudaMemcpyHostToDevice);
+    }
+
+    // Memory 
     int arrSize = img->width*img->height*sizeof(uint8_t);
-    printf("size:%d\n", arrSize);
-
-    uint8_t * redDevice, * redNewDevice, * redNewHost = (uint8_t * )malloc(arrSize);
-
-    cudaMalloc(&redDevice, arrSize);
-    cudaMalloc(&redNewDevice, arrSize);
-
-    cudaMemcpy(redDevice, img->red, arrSize, cudaMemcpyHostToDevice);
-
-    blur<<<1, 1>>>(redDevice, redNewDevice, img->width, img->height);	
-
-    cudaMemcpy(redNewHost, redNewDevice, arrSize, cudaMemcpyDeviceToHost);
-
-    for(int i = 0; i < img->width*img->height; i++) printf("%d  ", img->red[i]);
-    printf("\n");
-    for(int i = 0; i < img->width*img->height; i++) printf("%d  ", redNewHost[i]);
-    printf("\n");
-
-    cudaFree(redDevice);
-    cudaFree(redNewDevice);
-    freeImage(img);
-    free(redNewHost);
-
-
-    // // RGB Values
-    // #pragma omp parallel 
-    // {
-    //     double rvalue, gvalue, bvalue, sum;
-
-    //     // Initial x, y and End x, y
-    //     int ix, iy, ex, ey;
-    //     int numThread = omp_get_thread_num();
-
-    //     // Each thread will make complete rows
-    //     ix = 0;
-    //     ex = img->width;
-
-    //     // Thre problme will be break on the columns of the img
-    //     // Each thread will make width/threads columns of the image
-    //     iy = img->height * numThread/threads;
-    //     ey = img->height * (numThread + 1)/threads;
-
-    //     //printf("Runing thread %u from (%d, %d) to (%d, %d)\n", * thread_id, ix, iy, ex, ey);
-
-    //     for(int i = iy; i <= ey && i < newImg->height; i++) for(int j = ix; j <= ex && j < newImg->width; j++){
-    //         rvalue = gvalue = bvalue = sum = 0;
-    //         // For each location in kernel
-    //         for(int k = -1 * ksize/2; k <= ksize/2; k++) for(int l = -1 * ksize/2; l <= ksize/2; l++) {
-    //             if(i + k < 0 || i + k >= newImg->height || j + l < 0 || j + l >= newImg->width) continue;
-                
-    //             rvalue += img->pixels[i + k][j + l].R * kernel[k + ksize/2][l + ksize/2];
-    //             gvalue += img->pixels[i + k][j + l].G * kernel[k + ksize/2][l + ksize/2];
-    //             bvalue += img->pixels[i + k][j + l].B * kernel[k + ksize/2][l + ksize/2];
-
-    //             // For normalization
-    //             sum += kernel[k + ksize/2][l + ksize/2];
-    //         }
-
-
-    //         // Saving calculated values
-    //         newImg->pixels[i][j].R = rvalue/sum;
-    //         newImg->pixels[i][j].G = gvalue/sum;
-    //         newImg->pixels[i][j].B = bvalue/sum;
-    //         //printf("Saving in location (%d, %d) value [%d;%d;%d]\n", i, j, newImg->pixels[i][j].R, newImg->pixels[i][j].G, newImg->pixels[i][j].B);
-    //     }
-    // }
+    uint8_t * colorDevice, * colorNewDevice;
     
+    cudaMalloc(&colorDevice, arrSize);
+    cudaMalloc(&colorNewDevice, arrSize);
 
-    // // Save new image
-    // writeImage(newImg, newImgName);
+    int iterations = (img->width*img->height + 1)/(BLOCKS * THREADS);
+    if(BLOCKS * THREADS > img->width*img->height + 1) iterations = 1;
+    int sharedMemory = ksize*ksize*sizeof(double);
 
-    // // Free
-    // freeImage(img);
-    // freeImage(newImg);
+    printf("Running with %d threads, %d BLocks, %d ksize, %d iterations\n", THREADS, BLOCKS, ksize, iterations);
 
+    for (int i = 0; i < 3; i++){
+        printf("Running color %d\n", i);
+        // Alloc Image in memory;
+        switch(i){
+            case 0: cudaMemcpy(colorDevice, img->red, arrSize, cudaMemcpyHostToDevice); break;
+            case 1: cudaMemcpy(colorDevice, img->blue, arrSize, cudaMemcpyHostToDevice); break;
+            case 2: cudaMemcpy(colorDevice, img->green, arrSize, cudaMemcpyHostToDevice); break;
+        }
 
-    // gettimeofday(&stop, NULL);
-    // timersub(&stop, &start, &diff);
-    // printf("Tiempo: %ld.%06ld\n", (long int) diff.tv_sec, (long int) diff.tv_usec);
+        // Execution
+        blur<<<BLOCKS, THREADS, sharedMemory>>>(colorDevice, colorNewDevice, kDevice, ksize, img->width, img->height, iterations);	
+
+        // Copy results
+        switch(i){
+            case 0: cudaMemcpy(img->red, colorNewDevice, arrSize, cudaMemcpyDeviceToHost); break;
+            case 1: cudaMemcpy(img->blue, colorNewDevice, arrSize, cudaMemcpyDeviceToHost); break;
+            case 2: cudaMemcpy(img->green, colorNewDevice, arrSize, cudaMemcpyDeviceToHost); break;
+        }
+    }
+
+    // Save new image
+    printf("Guardando imagen\n");
+    writeImage(img, newImgName);
+
+    // Free
+    cudaFree(colorDevice);
+    cudaFree(colorNewDevice);
+    freeImage(img);
+
+    //Stadistics
+    gettimeofday(&stop, NULL);
+    timersub(&stop, &start, &diff);
+    printf("Tiempo: %ld.%06ld\n", (long int) diff.tv_sec, (long int) diff.tv_usec);
 
     return 0;
 }
