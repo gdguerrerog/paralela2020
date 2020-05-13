@@ -95,7 +95,7 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    printf("Imagen %s cargada\n", imgname);
+    //printf("Imagen %s cargada\n", imgname);
 
     // Kernel
     kernel = gaussianKernel(ksize);
@@ -127,10 +127,10 @@ int main(int argc, char **argv) {
     if(BLOCKS * THREADS > img->width*img->height + 1) iterations = 1;
     int sharedMemory = ksize*ksize*sizeof(double);
 
-    printf("Running with %d threads, %d BLocks, %d ksize, %d iterations\n", THREADS, BLOCKS, ksize, iterations);
+    //printf("Running with %d threads, %d BLocks, %d ksize, %d iterations\n", THREADS, BLOCKS, ksize, iterations);
 
     for (int i = 0; i < 3; i++){
-        printf("Running color %d\n", i);
+        //printf("Running color %d\n", i);
         // Alloc Image in memory;
         switch(i){
             case 0: cudaMemcpy(colorDevice, img->red, arrSize, cudaMemcpyHostToDevice); break;
@@ -150,7 +150,7 @@ int main(int argc, char **argv) {
     }
 
     // Save new image
-    printf("Guardando imagen\n");
+    //printf("Guardando imagen\n");
     writeImage(img, newImgName);
 
     // Free

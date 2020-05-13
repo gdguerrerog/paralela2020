@@ -1,0 +1,203 @@
+Tamaño del Kernel 3
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.138504 segundos
+Prueba # 2
+Tiempo: 0.138231 segundos
+Prueba # 3
+Tiempo: 0.138519 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.150991 segundos
+Prueba # 2
+Tiempo: 0.134300 segundos
+Prueba # 3
+Tiempo: 0.141516 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.133556 segundos
+Prueba # 2
+Tiempo: 0.158011 segundos
+Prueba # 3
+Tiempo: 0.135996 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.134370 segundos
+Prueba # 2
+Tiempo: 0.134636 segundos
+Prueba # 3
+Tiempo: 0.136285 segundos
+Tamaño del Kernel 5
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.152290 segundos
+Prueba # 2
+Tiempo: 0.139522 segundos
+Prueba # 3
+Tiempo: 0.138514 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.162477 segundos
+Prueba # 2
+Tiempo: 0.135935 segundos
+Prueba # 3
+Tiempo: 0.141100 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.155745 segundos
+Prueba # 2
+Tiempo: 0.150012 segundos
+Prueba # 3
+Tiempo: 0.136715 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.137770 segundos
+Prueba # 2
+Tiempo: 0.151566 segundos
+Prueba # 3
+Tiempo: 0.134661 segundos
+Tamaño del Kernel 7
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.145986 segundos
+Prueba # 2
+Tiempo: 0.157120 segundos
+Prueba # 3
+Tiempo: 0.147936 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.150898 segundos
+Prueba # 2
+Tiempo: 0.148766 segundos
+Prueba # 3
+Tiempo: 0.138815 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.134495 segundos
+Prueba # 2
+Tiempo: 0.138939 segundos
+Prueba # 3
+Tiempo: 0.134902 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.135372 segundos
+Prueba # 2
+Tiempo: 0.142163 segundos
+Prueba # 3
+Tiempo: 0.133802 segundos
+Tamaño del Kernel 9
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.174639 segundos
+Prueba # 2
+Tiempo: 0.159562 segundos
+Prueba # 3
+Tiempo: 0.156803 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.139640 segundos
+Prueba # 2
+Tiempo: 0.142267 segundos
+Prueba # 3
+Tiempo: 0.160615 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.136117 segundos
+Prueba # 2
+Tiempo: 0.147938 segundos
+Prueba # 3
+Tiempo: 0.138037 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.135508 segundos
+Prueba # 2
+Tiempo: 0.156865 segundos
+Prueba # 3
+Tiempo: 0.135094 segundos
+Tamaño del Kernel 11
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.163392 segundos
+Prueba # 2
+Tiempo: 0.162502 segundos
+Prueba # 3
+Tiempo: 0.168007 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.143801 segundos
+Prueba # 2
+Tiempo: 0.143602 segundos
+Prueba # 3
+Tiempo: 0.158395 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.141950 segundos
+Prueba # 2
+Tiempo: 0.150855 segundos
+Prueba # 3
+Tiempo: 0.151569 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.150410 segundos
+Prueba # 2
+Tiempo: 0.137032 segundos
+Prueba # 3
+Tiempo: 0.137922 segundos
+Tamaño del Kernel 13
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.156715 segundos
+Prueba # 2
+Tiempo: 0.151542 segundos
+Prueba # 3
+Tiempo: 0.154808 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.160548 segundos
+Prueba # 2
+Tiempo: 0.155636 segundos
+Prueba # 3
+Tiempo: 0.142079 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.158558 segundos
+Prueba # 2
+Tiempo: 0.139997 segundos
+Prueba # 3
+Tiempo: 0.138916 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.161685 segundos
+Prueba # 2
+Tiempo: 0.142424 segundos
+Prueba # 3
+Tiempo: 0.140147 segundos
+Tamaño del Kernel 15
+Numero de hilos por core 0.5
+Prueba # 1
+Tiempo: 0.172457 segundos
+Prueba # 2
+Tiempo: 0.160790 segundos
+Prueba # 3
+Tiempo: 0.170125 segundos
+Numero de hilos por core 1
+Prueba # 1
+Tiempo: 0.149602 segundos
+Prueba # 2
+Tiempo: 0.152902 segundos
+Prueba # 3
+Tiempo: 0.157838 segundos
+Numero de hilos por core 2
+Prueba # 1
+Tiempo: 0.143469 segundos
+Prueba # 2
+Tiempo: 0.145843 segundos
+Prueba # 3
+Tiempo: 0.154177 segundos
+Numero de hilos por core 4
+Prueba # 1
+Tiempo: 0.150952 segundos
+Prueba # 2
+Tiempo: 0.158797 segundos
+Prueba # 3
+Tiempo: 0.154499 segundos
