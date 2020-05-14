@@ -37,7 +37,7 @@ double * * gaussianKernel(int size){
 
 
 __global__  
-void blur(uint8_t * color, uint8_t * newColor, double * kernel, int ksize, int imgWidth, int imgHeight, int iterations){
+void blur(uint8_t * color, uint8_t * newColor, double * kernel, int ksize, int imgWidth, int imgHeight, double iterations){
     
     int i;
 
@@ -123,11 +123,14 @@ int main(int argc, char **argv) {
     cudaMalloc(&colorDevice, arrSize);
     cudaMalloc(&colorNewDevice, arrSize);
 
-    int iterations = (img->width*img->height + 1)/(BLOCKS * THREADS);
-    if(BLOCKS * THREADS > img->width*img->height + 1) iterations = 1;
+    double iterations = (1.0*img->width*img->height)/(BLOCKS * THREADS);
+    
+    if(BLOCKS * THREADS > img->width*img->height) iterations = 1;
     int sharedMemory = ksize*ksize*sizeof(double);
 
-    printf("Running with %d threads, %d BLocks, %d ksize, %d iterations\n", THREADS, BLOCKS, ksize, iterations);
+    printf("Size: %d, iterations: %f\n", img->width*img->height, iterations * BLOCKS * THREADS);
+
+    printf("Running with %d threads, %d BLocks, %d ksize, %f iterations\n", THREADS, BLOCKS, ksize, iterations);
 
     for (int i = 0; i < 3; i++){
         printf("Running color %d\n", i);
