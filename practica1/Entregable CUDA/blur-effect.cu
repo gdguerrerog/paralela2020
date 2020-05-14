@@ -128,32 +128,29 @@ int main(int argc, char **argv) {
     if(BLOCKS * THREADS > img->width*img->height) iterations = 1;
     int sharedMemory = ksize*ksize*sizeof(double);
 
-<<<<<<< HEAD
     printf("Size: %d, iterations: %f\n", img->width*img->height, iterations * BLOCKS * THREADS);
 
     printf("Running with %d threads, %d BLocks, %d ksize, %f iterations\n", THREADS, BLOCKS, ksize, iterations);
-=======
-    //printf("Running with %d threads, %d BLocks, %d ksize, %d iterations\n", THREADS, BLOCKS, ksize, iterations);
->>>>>>> 49549b3ad19fa703f3107ae59a5a54520c875670
+
+    uint8_t * currentPointer;
 
     for (int i = 0; i < 3; i++){
-        //printf("Running color %d\n", i);
+        printf("Running color %d\n", i);
         // Alloc Image in memory;
         switch(i){
-            case 0: cudaMemcpy(colorDevice, img->red, arrSize, cudaMemcpyHostToDevice); break;
-            case 1: cudaMemcpy(colorDevice, img->blue, arrSize, cudaMemcpyHostToDevice); break;
-            case 2: cudaMemcpy(colorDevice, img->green, arrSize, cudaMemcpyHostToDevice); break;
+            case 0: currentPointer = img->red; break;
+            case 1: currentPointer = img->blue; break;
+            case 2: currentPointer = img->green; break;
         }
+
+        cudaMemcpy(colorDevice, currentPointer, arrSize, cudaMemcpyHostToDevice);
 
         // Execution
         blur<<<BLOCKS, THREADS, sharedMemory>>>(colorDevice, colorNewDevice, kDevice, ksize, img->width, img->height, iterations);	
 
         // Copy results
-        switch(i){
-            case 0: cudaMemcpy(img->red, colorNewDevice, arrSize, cudaMemcpyDeviceToHost); break;
-            case 1: cudaMemcpy(img->blue, colorNewDevice, arrSize, cudaMemcpyDeviceToHost); break;
-            case 2: cudaMemcpy(img->green, colorNewDevice, arrSize, cudaMemcpyDeviceToHost); break;
-        }
+        cudaMemcpy(currentPointer, colorNewDevice, arrSize, cudaMemcpyDeviceToHost);
+        
     }
 
     // Save new image
