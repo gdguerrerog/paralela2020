@@ -1,0 +1,48 @@
+#!/bin/bash
+
+echo Bienvenido al programa de difuminado de imagenes:
+cont="continue"
+skernel=20
+first=-1;
+timevars=""
+while [ $cont == "continue" ]; do
+	skernel=0
+	echo Ingrese el nombre de la imagen a difuminar
+	read input
+	
+	echo Ingrese el nombre de la imagen nueva
+	read output
+
+	while [ $skernel -gt 100 ] || [ $skernel -lt 3 ]; do
+		echo Ingrese el tamaño del kernel \(Entre 3 y 15\)
+		read skernel
+	done	
+
+	echo Ingrese el numero de hilos por core
+	read nhilos
+	
+	
+
+	nvcc blur-effect.cu -o blur-effect -I /usr/local/cuda/samples/common/inc -lm
+	timevars=$(time ./blur-effect "$input" "$output" "$skernel" "$nhilos")
+	
+	if [ $first -lt 0 ]; then
+		echo Entrada $input >results.txt
+	else
+		echo Entrada $input >>results.txt
+	fi	
+	
+	echo Salida $output >>results.txt
+	echo Tamaño del Kernel $skernel >>results.txt
+	echo Numero de hilos $nhilos >>results.txt
+	
+	echo $timevars segundos>>results.txt
+	
+	
+	first=1;
+	echo Si desea ingresar mas imagenes digite \"continue\" de lo contrario digite cualquier otro valor	
+	read cont
+	
+
+done
+
