@@ -1,0 +1,252 @@
+Tamaño del Kernel 3
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,242237 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,231143 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,226119 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,233700 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,214564 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,213414 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218839 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225493 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223966 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,213943 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218367 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,224166 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217822 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,216705 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,214934 segundos
+Tamaño del Kernel 5
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,226986 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217378 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,216127 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,220323 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,232233 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,219292 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,216304 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,214638 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,234387 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,227561 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,231280 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223347 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222535 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217001 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218402 segundos
+Tamaño del Kernel 7
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217636 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,229091 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217899 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218305 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223473 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217104 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217532 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,215253 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225221 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222776 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218975 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217737 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221501 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,215799 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,226008 segundos
+Tamaño del Kernel 9
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,216577 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223624 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223010 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,231086 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222836 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,230732 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,215485 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,229006 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222706 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,224891 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,217522 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,219270 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221269 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222664 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,216829 segundos
+Tamaño del Kernel 11
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223188 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,220940 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222580 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,215351 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221195 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221708 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225310 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218220 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,219568 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222876 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221404 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223599 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,219267 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,224422 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221454 segundos
+Tamaño del Kernel 13
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,224767 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,224549 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,220351 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,230054 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,220301 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218997 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,227909 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,229085 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,218999 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,220243 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225783 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223342 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221223 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,228507 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225596 segundos
+Tamaño del Kernel 15
+Numero de hilos por core 0,5
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223465 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,220180 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223846 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,226279 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,229971 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222023 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223184 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223489 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,223687 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,222197 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225685 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,225626 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,230244 segundos
+Prueba # 2
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,221765 segundos
+Prueba # 3
+MapSMtoCores for SM 7,5 is undefined, Default to use 128 Cores/SM Tiempo: 0,227673 segundos

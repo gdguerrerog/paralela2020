@@ -1,0 +1,252 @@
+Tamaño del Kernel 3
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.103969 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.151041 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.208725 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.044192 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.177645 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.357892 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.201227 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.218944 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.148788 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.224591 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.105913 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.936962 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.958437 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.026243 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.044470 segundos
+Tamaño del Kernel 5
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.027373 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.135077 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.988410 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.157931 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.144704 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.071199 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.926827 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.899919 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.917006 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.919117 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.943576 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.934069 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.909858 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.031827 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.979418 segundos
+Tamaño del Kernel 7
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.907731 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.046101 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.991360 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.876667 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.876182 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.856426 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.893392 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.882046 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.867860 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.958322 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.877853 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.895670 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.861852 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.867921 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.992257 segundos
+Tamaño del Kernel 9
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.034529 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.946963 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.933849 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.882820 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.975599 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.891308 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.840180 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.893950 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.060964 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.964228 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.830514 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.955328 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.858538 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.951334 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.973758 segundos
+Tamaño del Kernel 11
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.911581 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.850376 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.896357 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.842132 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.777208 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.893101 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.942542 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.851970 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.825195 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.817440 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.876126 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.851175 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.929412 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.835038 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.827332 segundos
+Tamaño del Kernel 13
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.852749 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.852009 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.898271 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.913123 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.836415 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.859144 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.809784 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.850522 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.787596 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.837365 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.863140 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.925517 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.822496 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.799812 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.797960 segundos
+Tamaño del Kernel 15
+Numero de hilos por core 0.5
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.935536 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.918851 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.917026 segundos
+Numero de hilos por core 1
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.799746 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.853056 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.884862 segundos
+Numero de hilos por core 2
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.775827 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.825123 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.783004 segundos
+Numero de hilos por core 4
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.939191 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 6.013559 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.869381 segundos
+Numero de hilos por core 8
+Prueba # 1
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.800616 segundos
+Prueba # 2
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.783168 segundos
+Prueba # 3
+MapSMtoCores for SM 7.5 is undefined. Default to use 128 Cores/SM Tiempo: 5.775166 segundos
