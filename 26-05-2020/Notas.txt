@@ -1,0 +1,60 @@
+26-05-2020
+
+Open-MPI
+
+Deben haber varias máquinas que se llamarán nodos, y todas van a estar en RED
+Para esto se debe implementar una arquitectura cliente servidor
+
+En la arquitectura hay una máquina que funciona como servidor, y todos
+los demas nodos se conetan a este como clientes
+
+Se hace uso de Sockets
+En el servidor hay un hilo por cliente
+
+Esta arquitectura funciona muy bien si no hay demasiados clientes
+
+
+MPI es una API que permite simplificar las comunicaciones en sistemas de memoria distribuida
+MPI especifica una interfaz estandar para C y FORTRAN
+
+Se debe instalar la libreria de MPI
+sudo apt-get install openmpi-bin openmpi-common libopenmpi1.6 libopenmpi-dev
+
+se piede compilar con mpicc y mpirun
+
+Funciones básicas:
+
+
+#include <mpi.h>
+
+main(int argc, char** argv){
+    MPI_Init(&argc, *argv);
+
+    // Program
+
+    int size, iam; // Size es el número de procesos, iam es id del proceso
+    
+    // Obtener el numero de procesos
+    MPI_Comm_size(MPI_COM_WORLD, &size);
+    //Obtener el ID
+    MPI_Comm_rank(MPI_COM_WORLD, &iam);
+
+    MPI_Send(....) // Enviar mensages
+
+    MPI_Finalize();
+
+}
+
+
+
+NFS Network file system
+Carpetas compartidas
+
+sudo mount -t nfs master:/home/folder /home/folder
+sudo mount -t nfs source destiny
+
+abrir puertos 22, 21
+
+
+
+

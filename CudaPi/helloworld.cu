@@ -1,5 +1,8 @@
 #include <stdio.h> 
- 
+#include <cuda_runtime.h>
+#include <cuda.h>
+#include <helper_cuda.h>
+
 __global__ void calcpi(long long iteraciones, int nhilos, double *pi){
 	
 	int index = blockIdx.x*blockDim.x+threadIdx.x;

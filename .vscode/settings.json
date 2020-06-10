@@ -3,6 +3,9 @@
         "*.cu": "c",
         "cstdlib": "c",
         "*.cuh": "c",
-        "helper_cuda.h": "c"
+        "helper_cuda.h": "c",
+        "chrono": "c",
+        "algorithm": "c",
+        "cuda_runtime.h": "c"
     }
 }

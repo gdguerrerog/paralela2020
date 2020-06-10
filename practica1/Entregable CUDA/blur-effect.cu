@@ -73,14 +73,13 @@ int main(int argc, char **argv) {
 
     
     // For time stamp
-    struct timeval start, stop, diff;
+    struct timeval start, stop, diff, pstart, pend;
     gettimeofday(&start, NULL);
     
     char * imgname = argv[1]; 		// "GrandImg.jpg";//"img2.jpg";//"icon.png";//"GrandImg.jpg";
     char * newImgName = argv[2];	//"GrandImgBlur.jpg";//"img2Blur.jpg";//"iconBlur.png";//"GrandImgBlur.jpg";
     ksize = atoi(argv[3]);
     threadsPerCore = atof(argv[4]);
-    //printf("Ejecutando programa con:\n\t- %d threads\n\t- %d tamaño del kernel\n\t- %d tamaño de bloque\n\t- %.3f sigma\n", threads, ksize, bsize, sigma);
  
     // Even kernel size
     if((ksize & 1) == 0){
@@ -95,7 +94,7 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    //printf("Imagen %s cargada\n", imgname);
+    printf("Imagen %s cargada\n", imgname);
 
     // Kernel
     kernel = gaussianKernel(ksize);
@@ -128,11 +127,11 @@ int main(int argc, char **argv) {
     if(BLOCKS * THREADS > img->width*img->height) iterations = 1;
     int sharedMemory = ksize*ksize*sizeof(double);
 
-    printf("Size: %d, iterations: %f\n", img->width*img->height, iterations * BLOCKS * THREADS);
-
     printf("Running with %d threads, %d BLocks, %d ksize, %f iterations\n", THREADS, BLOCKS, ksize, iterations);
 
     uint8_t * currentPointer;
+
+    gettimeofday(&pstart, NULL);
 
     for (int i = 0; i < 3; i++){
         printf("Running color %d\n", i);
@@ -153,8 +152,13 @@ int main(int argc, char **argv) {
         
     }
 
+    gettimeofday(&pend, NULL);
+
+    timersub(&pend, &pstart, &diff);
+    printf("Tiempo de procesamiento: %ld.%06ld\n", (long int) diff.tv_sec, (long int) diff.tv_usec);
+
     // Save new image
-    //printf("Guardando imagen\n");
+    printf("Guardando imagen\n");
     writeImage(img, newImgName);
 
     // Free
