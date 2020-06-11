@@ -10,8 +10,8 @@ int main(int argc, char **argv){
     printf("Now in process %d\n", rank);
     do{
         if(rank == 0){
-            //scanf(" %d", &value);
-            value = -33;
+            scanf(" %d", &value);
+            //value = -33;
             MPI_Send(&value, 1, MPI_INT, rank + 1, 0, MPI_COMM_WORLD);
         }else{
             MPI_Recv(&value, 1, MPI_INT, rank - 1, 0, MPI_COMM_WORLD, &status);
