@@ -1,0 +1,232 @@
+Imagen: 720.jpg
+      Kernel: 3
+            Procesos: 1
+                  Prueba: 1  .  Tiempo: 0.286437 segundos
+                  Prueba: 2  .  Tiempo: 0.286779 segundos
+                  Prueba: 3  .  Tiempo: 0.285466 segundos
+            Procesos: 2
+                  Prueba: 1  .  Tiempo: 0.296126 segundos
+                  Prueba: 2  .  Tiempo: 0.286121 segundos
+                  Prueba: 3  .  Tiempo: 0.284951 segundos
+            Procesos: 3
+                  Prueba: 1  .  Tiempo: 0.283978 segundos
+                  Prueba: 2  .  Tiempo: 0.276263 segundos
+                  Prueba: 3  .  Tiempo: 0.275472 segundos
+            Procesos: 4
+                  Prueba: 1  .  Tiempo: 0.281884 segundos
+                  Prueba: 2  .  Tiempo: 0.272090 segundos
+                  Prueba: 3  .  Tiempo: 0.272011 segundos
+            Procesos: 5
+                  Prueba: 1  .  Tiempo: 0.278378 segundos
+                  Prueba: 2  .  Tiempo: 0.269379 segundos
+                  Prueba: 3  .  Tiempo: 0.272025 segundos
+            Procesos: 6
+                  Prueba: 1  .  Tiempo: 0.276032 segundos
+                  Prueba: 2  .  Tiempo: 0.270013 segundos
+                  Prueba: 3  .  Tiempo: 0.283603 segundos
+            Procesos: 7
+                  Prueba: 1  .  Tiempo: 0.276339 segundos
+                  Prueba: 2  .  Tiempo: 0.267531 segundos
+                  Prueba: 3  .  Tiempo: 0.268015 segundos
+            Procesos: 8
+                  Prueba: 1  .  Tiempo: 0.276791 segundos
+                  Prueba: 2  .  Tiempo: 0.266994 segundos
+                  Prueba: 3  .  Tiempo: 0.266676 segundos
+      Kernel: 5
+            Procesos: 1
+                  Prueba: 1  .  Tiempo: 0.354356 segundos
+                  Prueba: 2  .  Tiempo: 0.354620 segundos
+                  Prueba: 3  .  Tiempo: 0.356835 segundos
+            Procesos: 2
+                  Prueba: 1  .  Tiempo: 0.317582 segundos
+                  Prueba: 2  .  Tiempo: 0.317730 segundos
+                  Prueba: 3  .  Tiempo: 0.318066 segundos
+            Procesos: 3
+                  Prueba: 1  .  Tiempo: 0.298517 segundos
+                  Prueba: 2  .  Tiempo: 0.296267 segundos
+                  Prueba: 3  .  Tiempo: 0.298721 segundos
+            Procesos: 4
+                  Prueba: 1  .  Tiempo: 0.288879 segundos
+                  Prueba: 2  .  Tiempo: 0.287113 segundos
+                  Prueba: 3  .  Tiempo: 0.318035 segundos
+            Procesos: 5
+                  Prueba: 1  .  Tiempo: 0.308045 segundos
+                  Prueba: 2  .  Tiempo: 0.298139 segundos
+                  Prueba: 3  .  Tiempo: 0.306864 segundos
+            Procesos: 6
+                  Prueba: 1  .  Tiempo: 0.350566 segundos
+                  Prueba: 2  .  Tiempo: 0.460441 segundos
+                  Prueba: 3  .  Tiempo: 0.782069 segundos
+            Procesos: 7
+                  Prueba: 1  .  Tiempo: 0.779219 segundos
+                  Prueba: 2  .  Tiempo: 0.762250 segundos
+                  Prueba: 3  .  Tiempo: 0.780982 segundos
+            Procesos: 8
+                  Prueba: 1  .  Tiempo: 0.726241 segundos
+                  Prueba: 2  .  Tiempo: 0.731929 segundos
+                  Prueba: 3  .  Tiempo: 0.716537 segundos
+      Kernel: 7
+            Procesos: 1
+                  Prueba: 1  .  Tiempo: 0.461094 segundos
+                  Prueba: 2  .  Tiempo: 0.462350 segundos
+                  Prueba: 3  .  Tiempo: 0.465585 segundos
+            Procesos: 2
+                  Prueba: 1  .  Tiempo: 1.711069 segundos
+                  Prueba: 2  .  Tiempo: 1.756135 segundos
+                  Prueba: 3  .  Tiempo: 1.698380 segundos
+            Procesos: 3
+                  Prueba: 1  .  Tiempo: 1.329957 segundos
+                  Prueba: 2  .  Tiempo: 1.319860 segundos
+                  Prueba: 3  .  Tiempo: 1.383224 segundos
+            Procesos: 4
+                  Prueba: 1  .  Tiempo: 1.185116 segundos
+                  Prueba: 2  .  Tiempo: 1.176168 segundos
+                  Prueba: 3  .  Tiempo: 1.326729 segundos
+            Procesos: 5
+                  Prueba: 1 .  Tiempo: 2.130218 segundos
+                  Prueba: 2 .  Tiempo: 2.112121 segundos
+                  Prueba: 3 .  Tiempo: 2.086628 segundos
+            Procesos: 6
+                  Prueba: 1 .  Tiempo: 2.030589 segundos
+                  Prueba: 2 .  Tiempo: 2.033890 segundos
+                  Prueba: 3 .  Tiempo: 1.962767 segundos
+            Procesos: 7
+                  Prueba: 1 .  Tiempo: 2.007314 segundos
+                  Prueba: 2 .  Tiempo: 2.012608 segundos
+                  Prueba: 3 .  Tiempo: 2.228985 segundos
+            Procesos: 8
+                  Prueba: 1 .  Tiempo: 0.288246 segundos
+                  Prueba: 2 .  Tiempo: 0.287940 segundos
+                  Prueba: 3 .  Tiempo: 0.286199 segundos
+      Kernel: 9
+            Procesos: 1
+                  Prueba: 1 .  Tiempo: 0.603313 segundos
+                  Prueba: 2 .  Tiempo: 0.591548 segundos
+                  Prueba: 3 .  Tiempo: 0.591089 segundos
+            Procesos: 2
+                  Prueba: 1 .  Tiempo: 0.516670 segundos
+                  Prueba: 2  .  Tiempo: 0.729651 segundos
+                  Prueba: 3 .  Tiempo: 0.764164 segundos
+            Procesos: 3
+                  Prueba: 1 .  Tiempo: 1.466288 segundos
+                  Prueba: 2 .  Tiempo: 1.807544 segundos
+                  Prueba: 3 .  Tiempo: 1.814530 segundos
+            Procesos: 4
+                  Prueba: 1 .  Tiempo: 1.556639 segundos
+                  Prueba: 2 .  Tiempo: 1.539227 segundos
+                  Prueba: 3 .  Tiempo: 1.545405 segundos
+            Procesos: 5
+                  Prueba: 1 .  Tiempo: 1.365332 segundos
+                  Prueba: 2 .  Tiempo: 1.340515 segundos
+                  Prueba: 3 .  Tiempo: 1.352377 segundos
+            Procesos: 6
+                  Prueba: 1 .  Tiempo: 1.263411 segundos
+                  Prueba: 2 .  Tiempo: 1.224087 segundos
+                  Prueba: 3 .  Tiempo: 1.181040 segundos
+            Procesos: 7
+                  Prueba: 1 .  Tiempo: 1.094753 segundos
+                  Prueba: 2 .  Tiempo: 1.128769 segundos
+                  Prueba: 3 .  Tiempo: 1.093982 segundos
+            Procesos: 8
+                  Prueba: 1 .  Tiempo: 1.041190 segundos
+                  Prueba: 2 .  Tiempo: 1.325352 segundos
+                  Prueba: 3 .  Tiempo: 1.041946 segundos
+      Kernel: 11
+            Procesos: 1
+                  Prueba: 1 .  Tiempo: 0.756047 segundos
+                  Prueba: 2 .  Tiempo: 0.755892 segundos
+                  Prueba: 3 .  Tiempo: 1.051482 segundos
+            Procesos: 2
+                  Prueba: 1 .  Tiempo: 4.421569 segundos
+                  Prueba: 2 .  Tiempo: 4.364122 segundos
+                  Prueba: 3 .  Tiempo: 4.360457 segundos
+            Procesos: 3
+                  Prueba: 1 .  Tiempo: 3.407834 segundos
+                  Prueba: 2 .  Tiempo: 3.369818 segundos
+                  Prueba: 3 .  Tiempo: 3.470596 segundos
+            Procesos: 4
+                  Prueba: 1 .  Tiempo: 2.968516 segundos
+                  Prueba: 2 .  Tiempo: 2.905008 segundos
+                  Prueba: 3 .  Tiempo: 2.939489 segundos
+            Procesos: 5
+                  Prueba: 1 .  Tiempo: 2.640413 segundos
+                  Prueba: 2 .  Tiempo: 1.020821 segundos
+                  Prueba: 3 .  Tiempo: 0.580344 segundos
+            Procesos: 6
+                  Prueba: .  Tiempo: 0.980498 segundos
+                  Prueba:  .  Tiempo: 0.379999 segundos
+                  Prueba:  .  Tiempo: 0.379557 segundos
+            Procesos: 7
+                  Prueba:  .  Tiempo: 0.366052 segundos
+                  Prueba:  .  Tiempo: 0.591615 segundos
+                  Prueba:  .  Tiempo: 0.490804 segundos
+            Procesos: 8
+                  Prueba:  .  Tiempo: 1.208590 segundos
+                  Prueba: 2 .  Tiempo: 1.640746 segundos
+                  Prueba: 3 .  Tiempo: 1.294611 segundos
+      Kernel: 13
+            Procesos: 1
+                  Prueba: 1 .  Tiempo: 0.975044 segundos
+                  Prueba: 2 .  Tiempo: 0.980809 segundos
+                  Prueba: 3 .  Tiempo: 0.975249 segundos
+            Procesos: 2
+                  Prueba: 1 .  Tiempo: 4.260476 segundos
+                  Prueba: 2 .  Tiempo: 4.308299 segundos
+                  Prueba: 3 .  Tiempo: 4.320971 segundos
+            Procesos: 3
+                  Prueba: 1 .  Tiempo: 3.171209 segundos
+                  Prueba: 2 .  Tiempo: 4.106133 segundos
+                  Prueba: 3  .  Tiempo: 4.056662 segundos
+            Procesos: 4
+                  Prueba: 1  .  Tiempo: 3.473237 segundos
+                  Prueba: 2  .  Tiempo: 3.535548 segundos
+                  Prueba: 3  .  Tiempo: 3.427404 segundos
+            Procesos: 5
+                  Prueba: 1  .  Tiempo: 3.063597 segundos
+                  Prueba: 2  .  Tiempo: 3.083013 segundos
+                  Prueba: 3  .  Tiempo: 3.079242 segundos
+            Procesos: 6
+                  Prueba: 1  .  Tiempo: 2.852981 segundos
+                  Prueba: 2  .  Tiempo: 2.939637 segundos
+                  Prueba: 3  .  Tiempo: 2.915241 segundos
+            Procesos: 7
+                  Prueba: 1 .  Tiempo: 2.751516 segundos
+                  Prueba: 2  .  Tiempo: 2.727992 segundos
+                  Prueba: 3  .  Tiempo: 2.675452 segundos
+            Procesos: 8
+                  Prueba: 1  .  Tiempo: 2.515535 segundos
+                  Prueba: 2  .  Tiempo: 2.487270 segundos
+                  Prueba: 3 .  Tiempo: 2.578904 segundos
+      Kernel: 15
+            Procesos: 1
+                  Prueba: 1  .  Tiempo: 1.206000 segundos
+                  Prueba: 2  .  Tiempo: 1.200581 segundos
+                  Prueba: 3  .  Tiempo: 1.184550 segundos
+            Procesos: 2
+                  Prueba: 1  .  Tiempo: 5.536998 segundos
+                  Prueba: 2  .  Tiempo: 5.506772 segundos
+                  Prueba: 3  .  Tiempo: 5.523585 segundos
+            Procesos: 3
+                  Prueba: 1  .  Tiempo: 3.863045 segundos
+                  Prueba: 2  .  Tiempo: 4.051978 segundos
+                  Prueba: 3  .  Tiempo: 4.905250 segundos
+            Procesos: 4
+                  Prueba: 1  .  Tiempo: 4.053715 segundos
+                  Prueba: 2  .  Tiempo: 4.009906 segundos
+                  Prueba: 3  .  Tiempo: 4.004101 segundos
+            Procesos: 5
+                  Prueba: 1  .  Tiempo: 3.552267 segundos
+                  Prueba: 2  .  Tiempo: 3.590491 segundos
+                  Prueba: 3  .  Tiempo: 3.521800 segundos
+            Procesos: 6
+                  Prueba: 1  .  Tiempo: 3.212688 segundos
+                  Prueba: 2 .  Tiempo: 3.281265 segundos
+                  Prueba: 3  .  Tiempo: 3.274889 segundos
+            Procesos: 7
+                  Prueba: 1  .  Tiempo: 2.952156 segundos
+                  Prueba: 2  .  Tiempo: 3.013467 segundos
+                  Prueba: 3 .  Tiempo: 2.952440 segundos
+            Procesos: 8
+                  Prueba: 1  .  Tiempo: 2.788856 segundos
+                  Prueba: 2  .  Tiempo: 2.862732 segundos
+                  Prueba: 3  .  Tiempo: 2.820682 segundos

@@ -73,18 +73,18 @@ int main(int argc, char **argv) {
  
     // Even kernel size
     if((ksize & 1) == 0){
-        printf("Detectado tamaño de kernel par (%d). Solo se pueden usar tamaños impares de kernel por lo que se usará %d\n", ksize, ksize + 1);
+        //printf("Detectado tamaño de kernel par (%d). Solo se pueden usar tamaños impares de kernel por lo que se usará %d\n", ksize, ksize + 1);
         ksize++;
     }
 
     // Image Lecture
     Image * img =  (Image *)malloc(sizeof(Image));
     if(!readImage(imgname, img)){
-        printf("%s: ERROR LEYENDO IMAGEN\n", imgname);
+        //printf("%s: ERROR LEYENDO IMAGEN\n", imgname);
         return 0;
     }
 
-    printf("Imagen %s cargada\n", imgname);
+    //printf("Imagen %s cargada\n", imgname);
 
     // Kernel
     kernel = gaussianKernel(ksize);
@@ -99,12 +99,12 @@ int main(int argc, char **argv) {
 
     int iterations = (img->width*img->height)/(size) + 1;
 
-    printf("Running process %d with %d iterations (img: %d)\n", rank, iterations, img->width*img->height);
+    //printf("Running process %d with %d iterations (img: %d)\n", rank, iterations, img->width*img->height);
 
     uint8_t * currentPointer, * exit;
 
     for (int i = 0; i < 3; i++){
-        printf("Running color %d in process %d\n", i, rank);
+        //printf("Running color %d in process %d\n", i, rank);
         // Alloc Image in memory;
         switch(i){
             case 0: currentPointer = img->red; break;
@@ -121,12 +121,12 @@ int main(int argc, char **argv) {
             for(int i = 0; i < iterations && i < img->height*img->width; i++) currentPointer[i] = exit[i];
 
             for(int j = 1; j < size; j++) {
-                printf("Ready to recive from process %d\n", j);
+                //printf("Ready to recive from process %d\n", j);
                 MPI_Recv(exit, iterations, MPI_UNSIGNED_CHAR, j, 0, MPI_COMM_WORLD, &status);
-                printf("Recived data from process %d\n", j);
+                //printf("Recived data from process %d\n", j);
                 int k;
                 for(k = 0; k < iterations && j*iterations + k < img->width*img->height; k++) currentPointer[j*iterations + k] = exit[k];
-                printf("Added %d elements from process %d\n", k, j);
+                //printf("Added %d elements from process %d\n", k, j);
             }
         }
 
@@ -134,7 +134,7 @@ int main(int argc, char **argv) {
 
     if(rank == 0){
         // Save new image
-        printf("Guardando imagen\n");
+        //printf("Guardando imagen\n");
         writeImage(img, newImgName);
 
         //Stadistics

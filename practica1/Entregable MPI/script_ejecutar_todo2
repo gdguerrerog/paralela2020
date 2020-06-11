@@ -1,0 +1,26 @@
+#!/bin/bash
+
+echo Bienvenido al programa de difuminado de imagenes:
+timevars=""
+TAB='     '
+
+declare -a input=("720.jpg" "1080.jpg" "4k.jpg")
+declare -a output=("720salida.jpg" "1080salida.jpg" "4ksalida.jpg")
+
+mpicc blur-effect.c -o blur-effect -lm
+
+for ((current = 0; current < 3; current++)); do
+	echo Imagen: ${input[$current]} >> test.txt
+	for ((ksize = 3; ksize <= 15; ksize=(ksize+2))); do
+		echo "${TAB}" Kernel: $ksize >> test.txt
+		for ((hilo = 1; hilo <= 8; hilo++)); do
+			echo "${TAB}" "${TAB}" Procesos: $hilo >> test.txt
+			for ((prueba = 1; prueba <= 3; prueba++)); do
+				timevars=$(mpirun -np "$hilo" --hostfile mpi-hosts ./blur-effect "${input[$current]}" "${output[$current]}" "$ksize")
+				echo "${TAB}" "${TAB}" "${TAB}" Prueba: $prueba $timevars segundos>>test.txt
+			done
+		done
+	done
+done
+
+
