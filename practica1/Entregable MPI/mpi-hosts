@@ -1,0 +1,3 @@
+# The Hostfile for Open MPI
+
+localhost slots=6
